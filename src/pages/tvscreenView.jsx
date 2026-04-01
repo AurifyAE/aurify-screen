@@ -299,7 +299,7 @@ function TvScreen() {
           <Box
             sx={{
               height: "auto",
-              width: { xs: "40vw", sm: "28vw" },
+              width: { xs: "40vw", sm: "25vw" },
               marginBottom: { xs: "20px", sm: "2vw" },
             }}
           >
@@ -317,9 +317,9 @@ function TvScreen() {
           gap="2vw"
           gridTemplateColumns={"1fr "}
         >
-          <SystemClock />
           <WorldClockHorizontal />
           <CommodityTable items={commodities} />
+          <SystemClock />
         </Grid>
 
         <Grid

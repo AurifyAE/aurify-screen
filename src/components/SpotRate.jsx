@@ -172,21 +172,30 @@ const SpotRate = () => {
       <Box
         sx={{
           padding: { xs: " 0vw 3vw", sm: "0 " },
+          border: "0.1vw solid rgba(255 255 255 / 0.21)",
+          borderRadius: "1.5vw",
+          backdropFilter: "blur(0.4vw)",
+          padding: { xs: " 2vw 3vw", sm: " 0.5vw 2vw", md: "1vw 2vw" },
         }}
       >
-         
-
+        <Box
+          sx={{
+            fontSize: { xs: "14px", md: "1.5vw" },
+            fontWeight: 700,
+            color: "white",
+            letterSpacing: "0.1em",
+          }}
+        >
+          {title}
+        </Box>
         <Box
           sx={{
             position: "relative",
-            border: "0.1vw solid rgba(255 255 255 / 0.21)",
+
             overflow: "hidden",
             display: "grid",
             gap: "2vw",
-            padding: { xs: " 2vw 3vw", sm: " 0.5vw 2vw" ,md:'1vw 2vw'},
             gridTemplateColumns: "  1fr 1fr",
-            borderRadius: "1vw",
-            backdropFilter: "blur(0.4vw)",
           }}
         >
           <Box
@@ -234,7 +243,7 @@ const SpotRate = () => {
         display: "grid",
         gap: "2vw",
         width: "100%",
-        alignItems:'end',
+        alignItems: "end",
         marginTop: {
           xs: "20px", // mobile
           sm: "0vw", // small tablets
@@ -248,7 +257,6 @@ const SpotRate = () => {
         askDir={goldAskDir}
         theme="gold"
       />
-      
 
       <MetalPanel
         data={silverData}

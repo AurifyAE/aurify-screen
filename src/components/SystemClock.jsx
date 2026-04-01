@@ -60,9 +60,7 @@ const SystemClock = () => {
           width: "100%",
           padding: "1.2vw 2.5vw",
           borderRadius: "20px",
-          backdropFilter: "blur(4px)",
-          border: "1px solid rgba(255,255,255,0.15)",
-          boxShadow: "0 8px 30px rgba(0,0,0,0.25)",
+          backdropFilter: "blur(2px)",
         }}
       >
         {/* Day */}

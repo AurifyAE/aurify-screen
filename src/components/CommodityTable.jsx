@@ -51,7 +51,7 @@ const CommodityTable = ({ title, items }) => {
       maximumFractionDigits: decimals,
     });
   };
- 
+
   const rows =
     items
       ?.map((item) => {
@@ -105,7 +105,6 @@ const CommodityTable = ({ title, items }) => {
 
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
-      
       <Box
         sx={{
           display: "grid",
@@ -115,7 +114,7 @@ const CommodityTable = ({ title, items }) => {
           borderRadius: "0.5vw",
           alignItems: "end",
           borderRadius: "0.8vw",
-          background:'#5a4b663d',
+          background: "#5a4b663d",
           backdropFilter: "blur(0.3vw)",
           border: "0.1vw solid #DDFDFF59",
         }}
@@ -144,7 +143,6 @@ const CommodityTable = ({ title, items }) => {
               xs: "14px",
               lg: "1.2vw",
               xl: "1.5vw",
-
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -160,7 +158,6 @@ const CommodityTable = ({ title, items }) => {
               xs: "14px",
               lg: "1.2vw",
               xl: "1.5vw",
-
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -177,7 +174,6 @@ const CommodityTable = ({ title, items }) => {
               xs: "14px",
               lg: "1.2vw",
               xl: "1.5vw",
-
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -190,7 +186,7 @@ const CommodityTable = ({ title, items }) => {
 
       <Box
         sx={{
-          mt:'1vw',
+          mt: "1vw",
           maxHeight: { xs: "auto", sm: "18vw" },
         }}
       >
@@ -209,17 +205,23 @@ const CommodityTable = ({ title, items }) => {
           <Swiper
             direction="vertical"
             slidesPerView={4}
-            spaceBetween={10}
             loop={true}
-            // modules={[Autoplay]} // 👈 Register it here
-            // autoplay={{
-            //   delay: 0,
-            //   disableOnInteraction: false,
-            // }}
+            modules={[Autoplay]} // 👈 Register it here
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
             speed={3000} // 👈 higher = smoother slow scroll
             // allowTouchMove={false} // important for TV
-            style={{ height: isMobile ? "35vw" : "18vw" }}
-          >
+            style={{ height: isMobile ? "35vw" : "18vw" ,
+
+              backdropFilter: "blur(5px)",
+              background:'#ffffff12',
+              borderRadius: "1.5vw",
+
+
+            }}
+          >«
             {rows.map((row, index) => (
               <SwiperSlide key={index}>
                 <Box
@@ -228,11 +230,9 @@ const CommodityTable = ({ title, items }) => {
                     display: "grid",
                     gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
                     alignItems: "end",
-                    borderRadius: ".5vw",
                     py: ".7vw",
                     px: "1.5vw",
-                    backdropFilter: "blur(0.3vw)",
-                    border: "1px solid rgba(255, 255, 255, 0.3)", // 👈 mild bg
+                    height: "100%",
                   }}
                 >
                   <Typography
@@ -280,7 +280,6 @@ const CommodityTable = ({ title, items }) => {
                         xs: "14px",
                         lg: "1.3vw",
                         xl: "1.8vw",
-
                       },
                       color: "#FFFFFF",
                       textAlign: "start",
@@ -296,7 +295,6 @@ const CommodityTable = ({ title, items }) => {
                         xs: "14px",
                         lg: "1.5vw",
                         xl: "1.8vw",
-
                       },
                       fontWeight: 600,
                       color: "#FFFFFF", // soft pink ASK
@@ -312,7 +310,6 @@ const CommodityTable = ({ title, items }) => {
                         xs: "14px",
                         lg: "1.5vw",
                         xl: "1.8vw",
-
                       },
                       fontWeight: 600,
                       color: "#FFFFFF", // soft pink ASK
