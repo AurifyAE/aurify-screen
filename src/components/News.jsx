@@ -6,6 +6,8 @@ const NewsTicker = ({ newsItems = [] }) => {
   const tickerItems =
     newsItems.length <= 1 ? Array(5).fill(newsItems[0]) : newsItems;
 
+
+    
   return (
     <Box
       sx={{
