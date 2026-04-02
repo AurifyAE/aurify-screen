@@ -117,7 +117,7 @@ const SpotRate = () => {
             fontSize: {
               xs: "15px", // mobile
               sm: "2.5vw", // small tablets
-              md: "1.6vw", // laptops
+              md: "1.5vw", // laptops
             },
             letterSpacing: "0.25vw",
             color: "#FFFFFF",
@@ -174,8 +174,9 @@ const SpotRate = () => {
           padding: { xs: " 0vw 3vw", sm: "0 " },
           border: "0.1vw solid rgba(255 255 255 / 0.21)",
           borderRadius: "1.5vw",
+          boxShadow: "1px 1px  15px #172540",
           backdropFilter: "blur(0.4vw)",
-          padding: { xs: " 2vw 3vw", sm: " 0.5vw 2vw", md: "1vw 2vw" },
+          padding: { xs: " 2vw 3vw", sm: " 0.5vw 2vw", md: "1vw 1vw" },
         }}
       >
         <Box
@@ -204,8 +205,8 @@ const SpotRate = () => {
                 xs: "15px", // mobile
                 sm: "2.5vw", // small tablets
                 md: "1.8vw", // laptops
-                lg: "1.6vw", // desktop
-                xl: "1.4vw", // large screens
+                lg: "1.5vw", // desktop
+                xl: "1.2vw", // large screens
               },
 
               fontWeight: "700",
@@ -222,8 +223,8 @@ const SpotRate = () => {
                 xs: "15px", // mobile
                 sm: "2.5vw", // small tablets
                 md: "1.8vw", // laptops
-                lg: "1.6vw", // desktop
-                xl: "1.4vw", // large screens
+                lg: "1.5vw", // desktop
+                xl: "1.2vw", // large screens
               },
               fontWeight: "700",
             }}
@@ -241,7 +242,7 @@ const SpotRate = () => {
     <Box
       sx={{
         display: "grid",
-        gap: "2vw",
+        gap: "1vw",
         width: "100%",
         alignItems: "end",
         marginTop: {

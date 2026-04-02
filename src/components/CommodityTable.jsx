@@ -106,6 +106,7 @@ const CommodityTable = ({ title, items }) => {
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
       <Box
+      
         sx={{
           display: "grid",
           gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
@@ -125,7 +126,7 @@ const CommodityTable = ({ title, items }) => {
             fontSize: {
               xs: "14px",
               lg: "1.2vw",
-              xl: "1.5vw",
+              xl: "1.3vw",
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -142,7 +143,7 @@ const CommodityTable = ({ title, items }) => {
             fontSize: {
               xs: "14px",
               lg: "1.2vw",
-              xl: "1.5vw",
+              xl: "1.3vw",
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -157,7 +158,7 @@ const CommodityTable = ({ title, items }) => {
             fontSize: {
               xs: "14px",
               lg: "1.2vw",
-              xl: "1.5vw",
+              xl: "1.3vw",
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -173,7 +174,7 @@ const CommodityTable = ({ title, items }) => {
             fontSize: {
               xs: "14px",
               lg: "1.2vw",
-              xl: "1.5vw",
+              xl: "1.3vw",
             },
             fontWeight: 600,
             color: "#FFFFFF",
@@ -213,15 +214,15 @@ const CommodityTable = ({ title, items }) => {
             }}
             speed={3000} // 👈 higher = smoother slow scroll
             // allowTouchMove={false} // important for TV
-            style={{ height: isMobile ? "35vw" : "18vw" ,
+            style={{
+              height: isMobile ? "35vw" : "18vw",
 
               backdropFilter: "blur(5px)",
-              background:'#ffffff12',
+              background: "#ffffff12",
               borderRadius: "1.5vw",
-
-
             }}
-          >«
+          >
+            «
             {rows.map((row, index) => (
               <SwiperSlide key={index}>
                 <Box
@@ -229,7 +230,7 @@ const CommodityTable = ({ title, items }) => {
                   sx={{
                     display: "grid",
                     gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",
-                    alignItems: "end",
+                    alignItems: "center",
                     py: ".7vw",
                     px: "1.5vw",
                     height: "100%",
@@ -242,7 +243,7 @@ const CommodityTable = ({ title, items }) => {
                         xs: "14px",
                         sm: "12px",
                         lg: "1.6vw",
-                        xl: "1.8vw",
+                        xl: "1.4vw",
                       },
                       fontWeight: 800,
                       color: "#FFFFFF",
@@ -279,7 +280,7 @@ const CommodityTable = ({ title, items }) => {
                       fontSize: {
                         xs: "14px",
                         lg: "1.3vw",
-                        xl: "1.8vw",
+                        xl: "1.4vw",
                       },
                       color: "#FFFFFF",
                       textAlign: "start",
@@ -294,7 +295,7 @@ const CommodityTable = ({ title, items }) => {
                       fontSize: {
                         xs: "14px",
                         lg: "1.5vw",
-                        xl: "1.8vw",
+                        xl: "1.4vw",
                       },
                       fontWeight: 600,
                       color: "#FFFFFF", // soft pink ASK
@@ -309,7 +310,7 @@ const CommodityTable = ({ title, items }) => {
                       fontSize: {
                         xs: "14px",
                         lg: "1.5vw",
-                        xl: "1.8vw",
+                        xl: "1.4vw",
                       },
                       fontWeight: 600,
                       color: "#FFFFFF", // soft pink ASK

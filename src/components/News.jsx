@@ -18,6 +18,8 @@ const NewsTicker = ({ newsItems = [] }) => {
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
+        borderTop: "1px solid #172540",
+        backdropFilter: "blur(0.3vw)",
       }}
     >
       {/* LEFT BRAND */}
@@ -45,7 +47,12 @@ const NewsTicker = ({ newsItems = [] }) => {
       </Typography>
 
       {/* SCROLL AREA */}
-      <Box sx={{ flex: 1, overflow: "hidden" ,backdropFilter:'blur(0.3vw)'}}>
+      <Box
+        sx={{
+          flex: 1,
+          overflow: "hidden",
+        }}
+      >
         <Box
           sx={{
             whiteSpace: "nowrap",

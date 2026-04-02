@@ -17,6 +17,7 @@ import { useSpotRate } from "../context/SpotRateContext";
 import mainLogo from "/images/logo.svg";
 import WorldClockHorizontal from "../components/WorldClock";
 import SystemClock from "../components/SystemClock";
+import GoldChart from "../components/GoldChart";
 
 function TvScreen() {
   const [showLimitModal, setShowLimitModal] = useState(false);
@@ -212,24 +213,7 @@ function TvScreen() {
         backgroundColor: "black",
       }}
     >
-      {/* <Box
-        sx={{
-          height: "100%",
-          width: "100%",
-          pointerEvents: "none",
-
-          position: "fixed",
-          inset: 0,
-          zIndex: 0,
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={backgroundImage}
-          alt=""
-          className="object-cover w-full  h-full"
-        />
-      </Box> */}
+       
       <Box
         sx={{
           height: "100%",
@@ -238,7 +222,7 @@ function TvScreen() {
           pointerEvents: "none",
           left: 0,
           top: 0,
-          opacity: 0.5,
+          opacity: 0.6,
           zIndex: 0,
           overflow: "hidden",
         }}
@@ -258,7 +242,7 @@ function TvScreen() {
           right: 0,
           top: 0,
           transform: "rotate(180deg)",
-          opacity: 0.5,
+          opacity: 0.6,
           zIndex: 0,
           overflow: "hidden",
         }}
@@ -269,7 +253,6 @@ function TvScreen() {
           className="object-contain w-full h-full"
         />
       </Box>
-     
 
       {/* Grid */}
 
@@ -284,6 +267,8 @@ function TvScreen() {
         position="relative"
         margin="0"
         padding="0 2vw "
+        alignItems="center"
+
         width="100%"
       >
         <Grid
@@ -292,34 +277,36 @@ function TvScreen() {
           display="flex"
           alignItems="center"
           flexDirection="column"
-          justifyContent="start"
+          justifyContent="center"
           padding="1vw"
           marginBottom="0.5vw"
         >
           <Box
             sx={{
               height: "auto",
-              width: { xs: "40vw", sm: "25vw" },
+              width: { xs: "40vw", sm: "20vw" },
               marginBottom: { xs: "20px", sm: "2vw" },
             }}
           >
             <img src={mainLogo} alt="" className="object-contain w-full" />
           </Box>
           <SpotRate />
+          <WorldClockHorizontal />
         </Grid>
 
         {/* Side: SpotRate & Date Time */}
         <Grid
           xs={12}
           md={6}
-          display="grid"
           padding="1vw"
           gap="2vw"
-          gridTemplateColumns={"1fr "}
+          display="grid"
+
+          gridTemplateRows="1fr .8fr"
         >
-          <WorldClockHorizontal />
           <CommodityTable items={commodities} />
-          <SystemClock />
+          {/* <SystemClock /> */}
+          <GoldChart />
         </Grid>
 
         <Grid
