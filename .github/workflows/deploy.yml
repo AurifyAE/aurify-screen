@@ -22,6 +22,11 @@ jobs:
       # 3. Build project
       - name: Build Project
         run: npm run build
+        env:
+        VITE_APP_URL: ${{ secrets.VITE_APP_URL }}
+        VITE_APP_API_KEY: ${{ secrets.VITE_APP_API_KEY }}
+        VITE_APP_ADMIN_ID: ${{ secrets.VITE_APP_ADMIN_ID }}
+        VITE_APP_SOCKET_SECRET_KEY: ${{ secrets.VITE_APP_SOCKET_SECRET_KEY }}
 
       # 4. Clean and prepare Aurify-screen folder
       - name: Clean and prepare Aurify-screen folder
