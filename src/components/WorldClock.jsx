@@ -74,7 +74,7 @@ const WorldClockHorizontal = () => {
             textAlign: "center",
             display: "flex",
             alignItems: "center",
-            
+
             gap: {
               xs: "10px",
               lg: "1vw",

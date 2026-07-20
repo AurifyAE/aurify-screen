@@ -1,18 +1,17 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import Marquee from "react-fast-marquee";
 
 const NewsTicker = ({ newsItems = [] }) => {
-  // Ensure enough items for smooth scrolling
-  const tickerItems =
-    newsItems.length <= 1 ? Array(5).fill(newsItems[0]) : newsItems;
+  const items =
+    newsItems.length > 0
+      ? newsItems
+      : [{ description: "Welcome to Aurify Updates" }];
 
-
-    
   return (
     <Box
       sx={{
         width: "100%",
-        // height: "3vw",
         height: {
           xs: "35px",
           lg: "3vw",
@@ -41,7 +40,6 @@ const NewsTicker = ({ newsItems = [] }) => {
           alignItems: "center",
           borderRadius: "0.1vw",
           justifyContent: "center",
-
           flexShrink: 0,
         }}
       >
@@ -53,23 +51,24 @@ const NewsTicker = ({ newsItems = [] }) => {
         sx={{
           flex: 1,
           overflow: "hidden",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        <Box
-          sx={{
-            whiteSpace: "nowrap",
-            display: "inline-flex",
-            alignItems: "center",
-            animation: "ticker 70s linear infinite",
-          }}
+        <Marquee
+          speed={50}
+          gradient={false}
+          autoFill={true}
+          loop={0}
+          direction="left"
         >
-          {tickerItems.map((item, index) => (
+          {items.map((item, index) => (
             <Typography
               key={index}
               component="span"
               sx={{
                 color: "#e6e6e6",
-                // fontSize: "1.3vw",
                 fontSize: {
                   xs: "12px",
                   lg: "1.3vw",
@@ -82,22 +81,8 @@ const NewsTicker = ({ newsItems = [] }) => {
               {item?.description || ""}
             </Typography>
           ))}
-        </Box>
+        </Marquee>
       </Box>
-
-      {/* KEYFRAMES */}
-      <style>
-        {`
-          @keyframes ticker {
-            0% {
-              transform: translateX(30%);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-        `}
-      </style>
     </Box>
   );
 };

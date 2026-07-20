@@ -106,7 +106,7 @@ const CommodityTable = ({ title, items }) => {
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
       <Box
-      
+
         sx={{
           display: "grid",
           gridTemplateColumns: "1.4fr 0.8fr 0.8fr 0.8fr",

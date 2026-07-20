@@ -127,7 +127,7 @@ function TvScreen() {
         socket.emit("request-data", symbols);
       });
 
-      socket.on("disconnect", () => {});
+      socket.on("disconnect", () => { });
 
       // socket.on("market-data", (data) => {
       //   if (data && data.symbol) {
@@ -213,7 +213,7 @@ function TvScreen() {
         backgroundColor: "black",
       }}
     >
-       
+
       <Box
         sx={{
           height: "100%",
